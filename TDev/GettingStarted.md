@@ -35,7 +35,7 @@ curl -X POST -H 'Content-Type: application/x-www-form-urlencoded' \
 
 ## Sending a message
 
-It is possible to send a message with a simple post to http://beta-sapi.telstra.com/v2/messaging/SMS as demonstrated below
+It is possible to send a message with a simple post to http://beta-sapi.telstra.com/v2/messages/SMS as demonstrated below
 
 ```sh
 #!/bin/bash
@@ -48,7 +48,7 @@ Dest="Destination number"
 curl -X post -H "Authorization: Bearer $AccessToken" \
   -H "Content-Type: application/json" \
   -d '{ "to":"$Dest", "body":"Test Message" }' \
-  https://beta-sapi.telstra.com/v2/messaging/sms/
+  https://beta-sapi.telstra.com/v2/messages/sms/
 ```
 
 A number of parameters can be used in this call, these are;
